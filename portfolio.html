@@ -1,0 +1,608 @@
+<!-- Portofolio - Avicenna Port -->
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Portofolio Karya - Avicenna Port</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@500;600&amp;display=swap"
+        rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#454747",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#444748",
+                        "inverse-primary": "#c8c6c5",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#858383",
+                        "surface-container-high": "#e8e8e8",
+                        "on-secondary-container": "#616363",
+                        "surface-dim": "#dadada",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#c4c7c7",
+                        "secondary-container": "#dfe0e0",
+                        "tertiary-container": "#1c1b1a",
+                        "on-secondary": "#ffffff",
+                        "background": "#f9f9f9",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "on-tertiary-container": "#868382",
+                        "tertiary-fixed-dim": "#cac6c4",
+                        "on-primary-fixed": "#1c1b1b",
+                        "inverse-surface": "#2f3131",
+                        "on-surface": "#1a1c1c",
+                        "outline": "#747878",
+                        "inverse-on-surface": "#f1f1f1",
+                        "on-tertiary": "#ffffff",
+                        "surface-variant": "#e2e2e2",
+                        "surface-container": "#eeeeee",
+                        "primary-fixed": "#e5e2e1",
+                        "on-primary-fixed-variant": "#474746",
+                        "on-background": "#1a1c1c",
+                        "error-container": "#ffdad6",
+                        "primary": "#000000",
+                        "surface-tint": "#5f5e5e",
+                        "primary-container": "#1c1b1b",
+                        "tertiary": "#000000",
+                        "surface-container-low": "#f4f3f3",
+                        "surface": "#f9f9f9",
+                        "on-tertiary-fixed-variant": "#484645",
+                        "surface-bright": "#f9f9f9",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed": "#1c1b1a",
+                        "secondary-fixed": "#e2e2e2",
+                        "tertiary-fixed": "#e6e2df",
+                        "secondary": "#5d5f5f",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "error": "#ba1a1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "margin-desktop": "64px",
+                        "stack-md": "32px",
+                        "stack-sm": "16px",
+                        "stack-lg": "80px",
+                        "margin-mobile": "20px",
+                        "gutter": "32px",
+                        "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                        "headline-md": [
+                            "Playfair Display"
+                        ],
+                        "headline-lg-mobile": [
+                            "Playfair Display"
+                        ],
+                        "label-md": [
+                            "Inter"
+                        ],
+                        "headline-lg": [
+                            "Playfair Display"
+                        ],
+                        "body-md": [
+                            "Inter"
+                        ],
+                        "label-caps": [
+                            "Inter"
+                        ],
+                        "display-lg": [
+                            "Playfair Display"
+                        ],
+                        "body-lg": [
+                            "Inter"
+                        ]
+                    },
+                    "fontSize": {
+                        "headline-md": [
+                            "32px",
+                            {
+                                "lineHeight": "40px",
+                                "fontWeight": "500"
+                            }
+                        ],
+                        "headline-lg-mobile": [
+                            "32px",
+                            {
+                                "lineHeight": "40px",
+                                "fontWeight": "500"
+                            }
+                        ],
+                        "label-md": [
+                            "14px",
+                            {
+                                "lineHeight": "20px",
+                                "fontWeight": "500"
+                            }
+                        ],
+                        "headline-lg": [
+                            "48px",
+                            {
+                                "lineHeight": "56px",
+                                "fontWeight": "500"
+                            }
+                        ],
+                        "body-md": [
+                            "16px",
+                            {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "label-caps": [
+                            "12px",
+                            {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.1em",
+                                "fontWeight": "600"
+                            }
+                        ],
+                        "display-lg": [
+                            "64px",
+                            {
+                                "lineHeight": "72px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "600"
+                            }
+                        ],
+                        "body-lg": [
+                            "18px",
+                            {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .filter-btn.active {
+            border-bottom: 2px solid theme('colors.primary');
+            color: theme('colors.primary');
+        }
+
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+
+        .project-card {
+            break-inside: avoid;
+            margin-bottom: theme('spacing.gutter');
+        }
+
+        .masonry-grid {
+            column-count: 1;
+            column-gap: theme('spacing.gutter');
+        }
+
+        @media (min-width: 768px) {
+            .masonry-grid {
+                column-count: 2;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .masonry-grid {
+                column-count: 3;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-background antialiased min-h-screen flex flex-col font-body-md text-body-md">
+    <!-- TopNavBar (Desktop) -->
+    <header
+        class="hidden md:flex fixed top-0 w-full z-50 justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto bg-background/80 backdrop-blur-md border-b border-outline-variant transition-all duration-300 ease-out">
+        <div class="font-headline-md text-headline-md tracking-tight text-primary">Avicenna Port</div>
+        <nav class="flex gap-8 items-center">
+            <a class="text-secondary hover:text-primary transition-colors font-label-caps text-label-caps hover:opacity-80 transition-opacity duration-300"
+                href="index.html">Home</a>
+
+            <a class="text-primary border-b border-primary pb-1 font-label-caps text-label-caps hover:opacity-80 transition-opacity duration-300"
+                href="portfolio.html">Portfolio</a>
+
+            <a class="text-secondary hover:text-primary transition-colors font-label-caps text-label-caps hover:opacity-80 transition-opacity duration-300"
+                href="services.html#contact">Contact</a>
+        </nav>
+
+    </header>
+    <!-- SideNavBar (Mobile) -->
+    <nav class="md:hidden fixed inset-y-0 left-0 z-50 transform -translate-x-full transition-transform duration-300 ease-in-out bg-surface w-64 border-r border-outline-variant shadow-md h-full"
+        id="mobile-nav">
+        <div class="p-6 border-b border-outline-variant">
+            <div class="font-headline-md text-headline-md text-primary">Avicenna Port</div>
+            <div class="font-label-md text-label-md text-secondary mt-2">Architectural &amp; Interior Excellence</div>
+        </div>
+        <div class="flex flex-col py-4">
+            <a class="flex items-center gap-4 text-secondary px-4 py-3 font-label-caps text-label-caps hover:bg-surface-container-high transition-colors"
+                href="#">
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">home</span>Home
+            </a>
+
+            <a class="flex items-center gap-4 bg-secondary-container text-primary font-bold px-4 py-3 font-label-caps text-label-caps"
+                href="#">
+                <span class="material-symbols-outlined"
+                    style="font-variation-settings: 'FILL' 1;">grid_view</span>Portfolio
+            </a>
+            <a class="flex items-center gap-4 text-secondary px-4 py-3 font-label-caps text-label-caps hover:bg-surface-container-high transition-colors"
+                href="#">
+                <span class="material-symbols-outlined"
+                    style="font-variation-settings: 'FILL' 0;">architecture</span>Services
+            </a>
+            <a class="flex items-center gap-4 text-secondary px-4 py-3 font-label-caps text-label-caps hover:bg-surface-container-high transition-colors"
+                href="#">
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">mail</span>Contact
+            </a>
+        </div>
+        <div class="p-4 mt-auto border-t border-outline-variant">
+            <a href="https://wa.me/+6281779518195"
+                class="block w-full text-center bg-primary text-on-primary font-label-caps text-label-caps px-4 py-3 hover:bg-tertiary-container transition-colors">Mulai
+                Konsultasi</a>
+        </div>
+    </nav>
+    <!-- Mobile Header Toggle -->
+    <div
+        class="md:hidden fixed top-0 w-full z-40 bg-background/90 backdrop-blur-sm border-b border-outline-variant px-margin-mobile py-4 flex justify-between items-center">
+        <div class="font-headline-md text-headline-md text-primary tracking-tight">Avicenna Port</div>
+        <button class="text-primary p-2" id="nav-toggle">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
+    </div>
+    <!-- Main Content -->
+    <main
+        class="flex-grow pt-[80px] md:pt-[120px] pb-stack-lg max-w-container-max mx-auto w-full px-margin-mobile md:px-margin-desktop">
+        <!-- Header Section -->
+        <section class="mb-stack-lg text-center md:text-left max-w-3xl">
+            <h1
+                class="font-display-lg text-display-lg text-primary mb-6 tracking-widest mb-stack-md uppercase font-bold">
+                Portofolio Karya</h1>
+            <p class="font-body-lg text-body-lg text-secondary max-w-xl mx-auto md:mx-0 leading-relaxed">
+                Sebuah kurasi presisi dari proyek arsitektur dan desain interior. Mengeksplorasi batas antara
+                bentuk struktural dan kehangatan ruang hidup melalui pendekatan minimalis modern.
+            </p>
+
+        </section>
+        <!-- Filter Bar -->
+        <section class="mb-stack-md border-b border-outline-variant pb-2 mb-stack-lg mt-stack-md">
+            <div class="flex gap-8 overflow-x-auto no-scrollbar whitespace-nowrap">
+                <button
+                    class="filter-btn active font-label-caps text-label-caps text-secondary hover:text-primary pb-2 transition-colors uppercase tracking-widest border-primary border px-4 py-2"
+                    data-filter="all">Semua</button>
+                <button
+                    class="filter-btn font-label-caps text-label-caps text-secondary hover:text-primary pb-2 transition-colors uppercase tracking-widest border px-4 py-2"
+                    data-filter="interior">Desain Interior</button>
+                <button
+                    class="filter-btn font-label-caps text-label-caps text-secondary hover:text-primary pb-2 transition-colors uppercase tracking-widest border px-4 py-2"
+                    data-filter="eksterior">Desain Eksterior</button>
+                <button
+                    class="filter-btn font-label-caps text-label-caps text-secondary hover:text-primary pb-2 transition-colors uppercase tracking-widest border px-4 py-2"
+                    data-filter="drafting">Drafting</button>
+            </div>
+
+        </section>
+        <!-- Gallery Grid (Masonry) -->
+        <section class="masonry-grid gap-gutter">
+            <!-- Project 1 -->
+            <div class="project-card relative cursor-pointer group" data-category="interior">
+                <div class="relative w-full aspect-[3/4] overflow-hidden bg-surface-variant">
+                    <img class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                        src="Interior 1.png">
+                    <div
+                        class="project-overlay absolute inset-0 bg-primary/20 backdrop-blur-sm opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span
+                            class="font-label-caps text-label-caps text-on-primary mb-2 bg-primary/80 self-start px-2 py-1">Desain
+                            Interior</span>
+                        <h3 class="font-headline-md text-headline-md text-on-primary">Mr. A Project - Desain Apotek</h3>
+                    </div>
+                </div>
+                <div class="mt-4 md:hidden">
+                    <h3 class="font-headline-md text-headline-md text-primary">Mr. A Project - Desain Apotek</h3>
+                    <span class="font-label-caps text-label-caps text-secondary">Desain Interior</span>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="project-card relative cursor-pointer group" data-category="eksterior">
+                <div class="relative w-full aspect-square overflow-hidden bg-surface-variant">
+                    <img class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                        src="Eksterior 1.jpeg">
+                    <div
+                        class="project-overlay absolute inset-0 bg-primary/20 backdrop-blur-sm opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span
+                            class="font-label-caps text-label-caps text-on-primary mb-2 bg-primary/80 self-start px-2 py-1">Desain
+                            Eksterior</span>
+                        <h3 class="font-headline-md text-headline-md text-on-primary">Mr. E Project - Fasad Rumah</h3>
+                    </div>
+                </div>
+                <div class="mt-4 md:hidden">
+                    <h3 class="font-headline-md text-headline-md text-primary">Mr. E Project - Fasad Rumah</h3>
+                    <span class="font-label-caps text-label-caps text-secondary">Desain Eksterior</span>
+                </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="project-card relative cursor-pointer group" data-category="drafting">
+                <div
+                    class="relative w-full aspect-[4/3] overflow-hidden bg-surface-variant border border-outline-variant">
+                    <img class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                        src="Drafting 1.jpeg">
+                    <div
+                        class="project-overlay absolute inset-0 bg-primary/20 backdrop-blur-sm opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span
+                            class="font-label-caps text-label-caps text-on-primary mb-2 bg-primary/80 self-start px-2 py-1">Drafting</span>
+                        <h3 class="font-headline-md text-headline-md text-on-primary">Mr. F Project - Perencanaan
+                            Foodcourt</h3>
+                    </div>
+                </div>
+                <div class="mt-4 md:hidden">
+                    <h3 class="font-headline-md text-headline-md text-primary">Mr. F Project - Perencanaan Foodcourt
+                    </h3>
+                    <span class="font-label-caps text-label-caps text-secondary">Drafting</span>
+                </div>
+            </div>
+            <!-- Project 4 -->
+            <div class="project-card relative cursor-pointer group" data-category="interior">
+                <div class="relative w-full aspect-[16/9] overflow-hidden bg-surface-variant">
+                    <img class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                        src="Interior 2.png">
+                    <div
+                        class="project-overlay absolute inset-0 bg-primary/20 backdrop-blur-sm opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span
+                            class="font-label-caps text-label-caps text-on-primary mb-2 bg-primary/80 self-start px-2 py-1">Desain
+                            Interior</span>
+                        <h3 class="font-headline-md text-headline-md text-on-primary">Mr. H Project - Interior Kamar
+                            Anak</h3>
+                    </div>
+                </div>
+                <div class="mt-4 md:hidden">
+                    <h3 class="font-headline-md text-headline-md text-primary">Mr. H Project - Interior Kamar Anak</h3>
+                    <span class="font-label-caps text-label-caps text-secondary">Desain Interior</span>
+                </div>
+            </div>
+            <!-- Project 5 -->
+            <div class="project-card relative cursor-pointer group" data-category="eksterior">
+                <div class="relative w-full aspect-[3/4] overflow-hidden bg-surface-variant">
+                    <img class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                        src="Eksterior 2.png">
+                    <div
+                        class="project-overlay absolute inset-0 bg-primary/20 backdrop-blur-sm opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span
+                            class="font-label-caps text-label-caps text-on-primary mb-2 bg-primary/80 self-start px-2 py-1">Desain
+                            Eksterior</span>
+                        <h3 class="font-headline-md text-headline-md text-on-primary">Mr. N Project - Fasad Perumahan
+                        </h3>
+                    </div>
+                </div>
+                <div class="mt-4 md:hidden">
+                    <h3 class="font-headline-md text-headline-md text-primary">Mr. N Project - Fasad Perumahan</h3>
+                    <span class="font-label-caps text-label-caps text-secondary">Desain Eksterior</span>
+                </div>
+            </div>
+            <!-- Project 6 -->
+            <div class="project-card relative cursor-pointer group" data-category="drafting">
+                <div class="relative w-full aspect-square overflow-hidden bg-surface-variant">
+                    <img class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                        src="Drafting 2.jpg">
+                    <div
+                        class="project-overlay absolute inset-0 bg-primary/20 backdrop-blur-sm opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span
+                            class="font-label-caps text-label-caps text-on-primary mb-2 bg-primary/80 self-start px-2 py-1">Drafting</span>
+                        <h3 class="font-headline-md text-headline-md text-on-primary">Mrs. N Project - Perencanaan Denah
+                        </h3>
+                    </div>
+                </div>
+                <div class="mt-4 md:hidden">
+                    <h3 class="font-headline-md text-headline-md text-primary">Mrs. N Project - Perencanaan Denah</h3>
+                    <span class="font-label-caps text-label-caps text-secondary">Drafting</span>
+                </div>
+            </div>
+            <!-- Project 7 (PDF) -->
+            <div class="project-card relative cursor-pointer group" data-category="drafting"
+                data-pdf="Proyek_Rumah_Subsidi.pdf">
+                <div
+                    class="relative w-full aspect-[4/3] overflow-hidden bg-surface-variant border border-outline-variant">
+                    <img class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                        src="Drafting 3.png">
+                    <div
+                        class="project-overlay absolute inset-0 bg-primary/20 backdrop-blur-sm opacity-0 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span
+                            class="font-label-caps text-label-caps text-on-primary mb-2 bg-primary/80 self-start px-2 py-1">Drafting</span>
+                        <h3 class="font-headline-md text-headline-md text-on-primary">Mrs. L Project - Rumah Subsidi
+                            Type 35
+                        </h3>
+                    </div>
+                </div>
+                <div class="mt-4 md:hidden">
+                    <h3 class="font-headline-md text-headline-md text-primary">Mrs. L Project - Rumah Subsidi Type 35
+                    </h3>
+                    <span class="font-label-caps text-label-caps text-secondary">Drafting</span>
+                </div>
+            </div>
+        </section>
+    </main> <!-- Footer -->
+    <footer
+        class="w-full py-stack-lg px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto bg-background border-t border-outline-variant flat no shadows transition-all ease-out duration-200">
+        <div class="flex flex-col gap-4">
+            <div class="font-headline-md text-headline-md text-primary">Avicenna Port</div>
+            <p class="font-body-md text-body-md text-secondary">Architectural &amp; Interior Excellence.</p>
+            <p class="font-label-md text-label-md text-secondary mt-auto">© 2026 Avicenna Port. All rights
+                reserved.</p>
+        </div>
+        <div class="flex flex-col gap-2">
+            <h4 class="font-label-caps text-label-caps text-primary mb-2">Navigation</h4>
+            <a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors duration-200"
+                href="index.html">Home</a>
+            <a class="font-body-md text-body-md text-primary underline transition-colors duration-200"
+                href="portfolio.html">Portfolio</a>
+            <a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors duration-200"
+                href="services.html">Services</a>
+            <a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors duration-200"
+                href="services.html#contact">Contact</a>
+        </div>
+        <div class="flex flex-col gap-2">
+            <h4 class="font-label-caps text-label-caps text-primary mb-2">Social</h4>
+            <a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors duration-200"
+                href="https://www.instagram.com/vicennnaa/">Instagram</a>
+            <a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors duration-200"
+                href="https://www.linkedin.com/in/ageng-saadia-avicenna-3165412a5/">LinkedIn</a>
+        </div>
+        <div class="flex flex-col gap-2">
+            <h4 class="font-label-caps text-label-caps text-primary mb-2">Contact</h4>
+            <a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors duration-200"
+                href="https://wa.me/+6281779518195">WhatsApp</a>
+            <a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors duration-200"
+                href="mailto:contact@avicennaport.com">Email</a>
+        </div>
+    </footer>
+    <!-- Lightbox Modal -->
+    <div class="fixed inset-0 z-[60] bg-background/95 backdrop-blur-md hidden opacity-0 transition-opacity duration-300 flex items-center justify-center p-8"
+        id="lightbox">
+        <button class="absolute top-8 right-8 text-primary p-2 hover:bg-surface-variant transition-colors rounded-full"
+            id="close-lightbox">
+            <span class="material-symbols-outlined text-3xl">close</span>
+        </button>
+        <div class="max-w-5xl w-full max-h-[819px] flex flex-col items-center">
+            <img alt="Enlarged project view" class="max-h-[716px] w-auto object-contain shadow-2xl mb-6"
+                id="lightbox-img"
+                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgcng9IjgiIGZpbGw9IiNlOGVhZWQiLz48cGF0aCBkPSJNMTcwIDEzMCBsMzAgNDAgbDIwLTE1IGw0MCA1NSBIMTQweiIgZmlsbD0iI2JkYzFjNiIvPjxjaXJjbGUgY3g9IjI1MCIgY3k9IjEyMCIgcj0iMTgiIGZpbGw9IiNiZGMxYzYiLz48L3N2Zz4=">
+            <iframe id="lightbox-pdf" class="hidden w-full h-[70vh] shadow-2xl mb-6" src=""></iframe>
+            <div class="text-center">
+                <span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mb-2 block"
+                    id="lightbox-category"></span>
+                <h2 class="font-headline-lg text-headline-lg text-primary" id="lightbox-title"></h2>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Mobile Nav Toggle
+        const navToggle = document.getElementById('nav-toggle');
+        const mobileNav = document.getElementById('mobile-nav');
+        let navOpen = false;
+
+        navToggle.addEventListener('click', () => {
+            navOpen = !navOpen;
+            if (navOpen) {
+                mobileNav.classList.remove('-translate-x-full');
+            } else {
+                mobileNav.classList.add('-translate-x-full');
+            }
+        });
+
+        // Filter Logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projects = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all
+                filterBtns.forEach(b => b.classList.remove('active', 'text-primary'));
+                filterBtns.forEach(b => b.classList.add('text-secondary'));
+
+                // Add active to clicked
+                btn.classList.add('active', 'text-primary');
+                btn.classList.remove('text-secondary');
+
+                const filter = btn.dataset.filter;
+
+                projects.forEach(project => {
+                    if (filter === 'all' || project.dataset.category === filter) {
+                        project.style.display = 'block';
+                    } else {
+                        project.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Lightbox Logic
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxPdf = document.getElementById('lightbox-pdf');
+        const lightboxTitle = document.getElementById('lightbox-title');
+        const lightboxCategory = document.getElementById('lightbox-category');
+        const closeLightbox = document.getElementById('close-lightbox');
+
+        projects.forEach(project => {
+            project.addEventListener('click', () => {
+                const img = project.querySelector('img').src;
+                const title = project.querySelector('h3').innerText;
+                const category = project.querySelector('span').innerText;
+                const pdfSrc = project.dataset.pdf;
+
+                if (pdfSrc) {
+                    lightboxImg.classList.add('hidden');
+                    if (lightboxPdf) {
+                        lightboxPdf.classList.remove('hidden');
+                        lightboxPdf.src = pdfSrc;
+                    }
+                } else {
+                    if (lightboxPdf) lightboxPdf.classList.add('hidden');
+                    lightboxImg.classList.remove('hidden');
+                    lightboxImg.src = img;
+                    if (lightboxPdf) lightboxPdf.src = "";
+                }
+
+                lightboxTitle.innerText = title;
+                lightboxCategory.innerText = category;
+
+                lightbox.classList.remove('hidden');
+                // Trigger reflow
+                void lightbox.offsetWidth;
+                lightbox.classList.add('opacity-100');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        const hideLightbox = () => {
+            lightbox.classList.remove('opacity-100');
+            setTimeout(() => {
+                lightbox.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+                if (lightboxPdf) lightboxPdf.src = "";
+            }, 300);
+        };
+
+        closeLightbox.addEventListener('click', hideLightbox);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) hideLightbox();
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggleBtn = document.getElementById('mobile-menu-btn') || document.getElementById('nav-toggle');
+            const mobileNav = document.getElementById('mobile-nav');
+
+            if (toggleBtn && mobileNav) {
+                toggleBtn.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    mobileNav.classList.toggle('-translate-x-full');
+                });
+
+                document.addEventListener('click', function (e) {
+                    if (!mobileNav.contains(e.target) && !toggleBtn.contains(e.target)) {
+                        mobileNav.classList.add('-translate-x-full');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
